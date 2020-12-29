@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <!--Font Awesome-->
     <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/ruleta.css"/>
     <!--Imagen de Fondo-->
     <style type="text/css">
         body {
@@ -30,7 +31,14 @@
         }
     </style>
 </head>
+
 <body>
+
+    <div class="userInfo">
+        <span id="userName">Bienvenido: </span>
+        <span id="userID"></span>
+    </div>
+
     <form id="form1" runat="server">
         <div>
             <!--Canvas Rueda-->
@@ -217,7 +225,7 @@
 			waitTime = 5000;			
 		  }
 		  
-		  setInterval(function(){ window.open("formulario.html", "_self"); }, waitTime);
+		  setInterval(function(){ window.open("index.php", "_self"); }, waitTime);
            //Reinicio de Ruleta
            miRuleta.stopAnimation(false);
          //  miRuleta.rotationAngle = 0;
@@ -255,5 +263,15 @@
             </div>
         </div>
     </form>
+
+
+    <!-- lib -->
+    <script src="lib/jquery-3.5.1.min.js"></script>
+
+    <!-- code -->
+    <script src="js/service/service.js"></script>
+
+    <script src="js/ruleta/controller.js"></script>
+    <!-- <script src="js/index/controller.js"></script> -->
 </body>
 </html>
